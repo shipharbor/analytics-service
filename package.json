@@ -1,0 +1,25 @@
+{
+  "name": "analytics-service",
+  "description": "Lil analytics service",
+  "repository": "shipharbor/analytics-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "PORT=8080 nodemon . | merry",
+    "test": "standard && npm run deps"
+  },
+  "dependencies": {
+    "hypercore": "^6.3.8",
+    "hyperdb": "github:mafintosh/hyperdb",
+    "hyperdiscovery": "^6.0.4",
+    "merry": "^5.0.5",
+    "random-access-file": "^1.7.3"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.8.0",
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.2",
+    "tape": "^4.6.3"
+  }
+}
