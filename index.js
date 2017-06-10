@@ -13,7 +13,7 @@ var core = hypercore(storage, { valueEncoding: 'json', sparse: true })
 var db = hyperdb([ core ])
 
 app.route('GET', '/:query', function (req, res, ctx) {
-  var val = ctx.params.params.query
+  var val = ctx.params.query
   db.get(val, function (err, nodes) {
     if (err) return errors.EDBQUERYFAIL(req, res, ctx)
     if (nodes && nodes[0] && nodes[0].value) ctx.send(200, nodes[0].value)
@@ -22,7 +22,7 @@ app.route('GET', '/:query', function (req, res, ctx) {
 })
 
 app.route('PUT', '/:query', function (req, res, ctx) {
-  var val = ctx.params.params.query
+  var val = ctx.params.query
   db.put(val, 'true', function (err) {
     if (err) return errors.EDBPUTFAIL(req, res, ctx)
     ctx.send(200, {})
