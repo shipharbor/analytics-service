@@ -1,4 +1,4 @@
-var toObject = require('json-stream-to-ject')
+var toObject = require('json-stream-to-object')
 var hyperdiscovery = require('hyperdiscovery')
 var raf = require('random-access-file')
 var hypercore = require('hypercore')
