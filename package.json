@@ -13,6 +13,7 @@
     "hypercore": "^6.3.8",
     "hyperdb": "github:mafintosh/hyperdb",
     "hyperdiscovery": "^6.0.4",
+    "json-stream-to-object": "^1.0.0",
     "merry": "^5.0.5",
     "random-access-file": "^1.7.3"
   },

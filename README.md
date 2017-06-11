@@ -1,6 +1,18 @@
 # analytics-service
 Lil analytics service.
 
+## Routes
+```txt
+GET /ping   Query the service to see if it's responding to requests
+PUT /log    Persist a log event to the database
+```
+
+## Environment
+```txt
+PORT  Number  Port to listen on
+DB    String  Location where the DB should be written to
+```
+
 ## Making DDOS slightly harder
 Generally analytics logs aren't particularly sensitive to write to - at worst
 there'll be skewed data which can be filtered in post-processing. To make it
